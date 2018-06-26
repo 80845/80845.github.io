@@ -1,6 +1,6 @@
 <script>
 //alert('dafsdfs');
-console.log('test3');
+console.log('test5');
 
 //var x = document.getElementById("iframe");
 //var y = (x.contentWindow || x.contentDocument);
@@ -9,8 +9,8 @@ console.log('test3');
 
 //var tabulek = y.getElementsByClassName("vis_tbl").length;
 
+/*
 var iframe = document.getElementById("iframe");
-
   let oldDoc = iframe.contentDocument;
   iframe.onload = function() {
     let newDoc = iframe.contentDocument;
@@ -19,7 +19,12 @@ var iframe = document.getElementById("iframe");
    var tabulek = newDoc.getElementsByClassName("vis_tbl").length;
 console.log('pocet tabulke:'+tabulek);
   };
+*/
+
+//window.frames[]
+var tabulek = window.frames[0].window.getElementsByClassName("vis_tbl").length;
 
 //var tabulek = x.getElementsByClassName("vis_tbl").length;
-//console.log('pocet tabulke:'+tabulek);
+
+console.log('pocet tabulke:'+tabulek);
 </script>
