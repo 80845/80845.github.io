@@ -1,6 +1,10 @@
+
+<iframe src="https://gold.webgame.cz/wg/index.php?p=konflikty&s=awarstat" id="iframe" name="podelanyfrejm" width="1" height="1" >
+</iframe>
+
 <script>
 //alert('dafsdfs');
-console.log('test8');
+console.log('test9');
 
 //var x = document.getElementById("iframe");
 //var y = (x.contentWindow || x.contentDocument);
@@ -25,6 +29,10 @@ console.log('pocet tabulke:'+tabulek);
 // var tabulek = window.frames[0].document.getElementsByClassName("vis_tbl").length;
 
 //var tabulek = x.getElementsByClassName("vis_tbl").length;
+
+
+
+/*
 var iframe = document.getElementById("iframe");
   iframe.onload = function() {
     // we can get the reference to the inner window
@@ -43,10 +51,13 @@ var iframe = document.getElementById("iframe");
     } catch(e) {
       alert(e); // Security Error
     }
+*/
 
     // ...but we can change it (and thus load something else into the iframe)!
    // iframe.contentWindow.location = '/'; // works
-var tabulek = iframe.contentWindow.document.getElementsByClassName("vis_tbl").length;
+  
+   var tabulek = window.frames.podelanyfrejm.document.getElementsByClassName("vis_tbl").length;
+//var tabulek = iframe.contentWindow.document.getElementsByClassName("vis_tbl").length;
    // iframe.onload = null; // clear the handler, to run this code only once
   };
   
