@@ -1,13 +1,25 @@
 <script>
 //alert('dafsdfs');
-console.log('test');
+console.log('test2');
 
-var x = document.getElementById("iframe");
+//var x = document.getElementById("iframe");
 //var y = (x.contentWindow || x.contentDocument);
 //if (y.document)y = y.document;
 //y.body.style.backgroundColor = "red";
 
 //var tabulek = y.getElementsByClassName("vis_tbl").length;
-var tabulek = x.getElementsByClassName("vis_tbl").length;
+
+
+
+  let oldDoc = iframe.contentDocument;
+  iframe.onload = function() {
+    let newDoc = iframe.contentDocument;
+    // the loaded document is not the same as initial!
+   // alert(oldDoc == newDoc); // false
+   var tabulek = newDoc.getElementsByClassName("vis_tbl").length;
 console.log('pocet tabulke:'+tabulek);
+  };
+
+//var tabulek = x.getElementsByClassName("vis_tbl").length;
+//console.log('pocet tabulke:'+tabulek);
 </script>
