@@ -1,10 +1,7 @@
 
-<iframe src="https://gold.webgame.cz/wg/index.php?p=konflikty&s=awarstat" id="iframe" name="podelanyfrejm" width="100" height="100" >
-</iframe>
-
 <script>
 //alert('dafsdfs');
-console.log('test10');
+console.log('test11');
 
 //var x = document.getElementById("iframe");
 //var y = (x.contentWindow || x.contentDocument);
@@ -60,8 +57,25 @@ var iframe = document.getElementById("iframe");
 //var tabulek = iframe.contentWindow.document.getElementsByClassName("vis_tbl").length;
    // iframe.onload = null; // clear the handler, to run this code only once
   //};
+  
+  /*
+var oReq = new XMLHttpRequest();
+oReq.open("GET", 'https://gold.webgame.cz/wg/index.php?p=konflikty&s=awarstat');
+  
     var tabulek = window.frames.podelanyfrejm.document.getElementsByClassName("vis_tbl").length;
+ */ 
+  
+   var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML = this.responseText;
+	  console.log('this.responseText');
+    }
+  };
+  xhttp.open("GET", "https://gold.webgame.cz/wg/index.php?p=konflikty&s=awarstat", true);
+  xhttp.send();
+  
   
 
-console.log('pocet tabulke:'+tabulek);
+//console.log('pocet tabulke:'+tabulek);
 </script>
