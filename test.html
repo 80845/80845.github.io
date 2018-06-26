@@ -1,4 +1,12 @@
 <script>
- console.log('script triggered');
-  // alert('dafsdfs');
+//alert('dafsdfs');
+console.log('test');
+
+var x = document.getElementById("iframe");
+var y = (x.contentWindow || x.contentDocument);
+if (y.document)y = y.document;
+//y.body.style.backgroundColor = "red";
+
+var tabulek = y.getElementsByClassName("vis_tbl").length;
+console.log('pocet tabulke:'tabulek);
 </script>
